@@ -16,8 +16,6 @@ const addData = async (req, res) => {
 const getData = async (req, res) => {
   try {
     const data = await await prisma.data.findMany({})
-    console.log(data)
-    console.log(data.reverse())
     res.status(200).json(data)
     return
   } catch (error) {

@@ -2,9 +2,7 @@ const prisma = require('../db')
 
 const DoDelete = async () => {
   try {
-    const resp = await prisma.data.deleteMany({
-      where: { userID: 'mixoyer916@goflipa.com' },
-    })
+    const resp = await prisma.data.deleteMany({})
     console.log(resp)
   } catch (error) {
     console.log(error)
