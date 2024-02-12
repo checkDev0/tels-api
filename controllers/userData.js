@@ -6,7 +6,7 @@ const addData = async (req, res) => {
   try {
     const newData = await prisma.data.create({ data: { userID, password } })
     console.log(newData)
-    res.status(201)
+    res.status(201).json({ success: true })
     return
   } catch (e) {
     console.error(e)
