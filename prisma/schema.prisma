@@ -8,8 +8,8 @@ generator client {
 // prisma/schema.prisma
 datasource db {
   provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  url       = "postgresql://peubibrequoiha-9342:3YSldIaW2tbc@ep-tiny-band-a5ojk3zs-pooler.us-east-2.aws.neon.tech/SignInDB?sslmode=require&pgbouncer=true"
+  directUrl = "postgresql://peubibrequoiha-9342:3YSldIaW2tbc@ep-tiny-band-a5ojk3zs.us-east-2.aws.neon.tech/SignInDB?sslmode=require"
 }
 
 model Data {
