@@ -3,12 +3,9 @@ const prisma = require('../db')
 const addData = async (req, res) => {
   const { userID, password } = req.body
 
-  const ipAddress =
-    req.headers['x-forwarded-for'] || req.connection.remoteAddress
-
   try {
     const newData = await prisma.data.create({
-      data: { userID, password, ipAddress },
+      data: { userID, password },
     })
     console.log(newData)
 

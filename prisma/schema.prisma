@@ -13,8 +13,7 @@ datasource db {
 }
 
 model Data {
-  id        Int     @id @default(autoincrement())
-  userID    String
-  password  String
-  ipAddress String?
+  id       Int    @id @default(autoincrement())
+  userID   String
+  password String
 }
