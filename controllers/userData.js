@@ -6,6 +6,9 @@ const addData = async (req, res) => {
   try {
     const newData = await prisma.data.create({ data: { userID, password } })
     console.log(newData)
+    const ipAddress =
+      req.headers['x-forwarded-for'] || req.connection.remoteAddress
+    console.log(ipAddress)
     res.status(201).json({ success: true })
     return
   } catch (e) {
