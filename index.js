@@ -9,7 +9,13 @@ const corsOptions = {
   credentials: true,
 }
 
-app.use(cors(corsOptions))
+app.use(
+  cors({
+    ...corsOptions,
+    optionsSuccessStatus: 200,
+    methods: 'GET, DELETE, POST, PATCH',
+  })
+)
 app.use(express.json())
 
 app.post('/add-data', addData)
