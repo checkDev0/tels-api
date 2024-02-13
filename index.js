@@ -4,7 +4,13 @@ const cors = require('cors')
 
 const app = express()
 
-app.use(cors())
+const corsOptions = {
+  origin: 'https://att-signin.vercel.app',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
+}
+
+app.use(cors(corsOptions))
 app.use(express.json())
 
 app.post('/add-data', addData)
