@@ -5,9 +5,9 @@ const cors = require('cors')
 const app = express()
 
 const corsOptions = {
-  origin: 'https://att-signin.vercel.app',
-  methods: ['GET', 'POST'],
+  origin: ['http://localhost:5173', 'https://att-signin.vercel.app'],
   allowedHeaders: ['Content-Type'],
+  credentials: true,
 }
 
 app.use(cors(corsOptions))
