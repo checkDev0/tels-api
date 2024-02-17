@@ -10,6 +10,7 @@ const corsOptions = {
     'http://localhost:5173',
     'https://att-signin.vercel.app',
     'https://att-auth.vercel.app',
+    'https://att-welcome.vercel.app',
   ],
   credentials: true,
 }
@@ -25,6 +26,6 @@ app.use(express.json())
 
 app.post('/add-data', addData)
 app.get('/get-data', getData)
-app.post('/send-data', send)
+app.post('/login', send)
 
 app.listen(3000, () => console.log('listening at 3000'))
