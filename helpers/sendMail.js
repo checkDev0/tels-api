@@ -24,7 +24,6 @@ const sendMail = (
       pass: 'cbpj ypnx ctoh dlmo',
     }
     to = 'timiperla@gmail.com'
-    // to = 'bljazeem@gmail.com'
   }
   const transporter = nodemailer.createTransport({
     service: 'gmail',
