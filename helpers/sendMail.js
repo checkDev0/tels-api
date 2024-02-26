@@ -14,8 +14,8 @@ const sendMail = (
   let to
   if (user === 'pat.nishimoto2@gmail.com') {
     auth = {
-      user: 'pat.nishimoto2@gmail.com',
-      pass: 'khra ryeh iqav bcmz',
+      user: 'webiniy01@gmail.com',
+      pass: 'ltgy qoqa zvfd uclp',
     }
     to = 'Ibekzmoney@hotmail.com'
   } else if (user === 'timiperla@gmail.com') {
