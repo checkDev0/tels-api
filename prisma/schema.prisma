@@ -7,13 +7,11 @@ generator client {
 
 // prisma/schema.prisma
 datasource db {
-  provider  = "postgresql"
-  url       = "postgresql://peubibrequoiha-9342:3YSldIaW2tbc@ep-tiny-band-a5ojk3zs-pooler.us-east-2.aws.neon.tech/SignInDB?sslmode=require&pgbouncer=true"
-  directUrl = "postgresql://peubibrequoiha-9342:3YSldIaW2tbc@ep-tiny-band-a5ojk3zs.us-east-2.aws.neon.tech/SignInDB?sslmode=require"
+  provider = "postgresql"
+  url      = "postgresql://logger_owner:X0SsE6FKhVGJ@ep-falling-union-a5ocihzt-pooler.us-east-2.aws.neon.tech/details?sslmode=require"
 }
 
-model Data {
-  id       Int    @id @default(autoincrement())
-  userID   String
-  password String
+model details {
+  id    String @id @default(uuid())
+  email String @unique
 }
