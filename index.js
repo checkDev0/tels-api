@@ -9,10 +9,8 @@ const corsOptions = {
   origin: [
     'http://localhost:5173',
     'http://localhost:5174',
-    'https://att-signin.vercel.app',
-    'https://one-note-welcome.vercel.app',
-    'https://welcome-at.vercel.app',
-    'https://att-auth.onrender.com',
+    'https://genurl.vercel.app',
+    'https://front-rose.vercel.app',
   ],
   credentials: true,
 }
