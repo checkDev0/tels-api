@@ -1,7 +1,7 @@
 {
-  "name": "out-api",
+  "name": "at-api",
   "version": "1.0.0",
-  "description": "front api",
+  "description": "at api",
   "main": "index.js",
   "engines": {
     "node": "18"
