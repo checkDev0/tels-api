@@ -9,8 +9,8 @@ const corsOptions = {
   origin: [
     'http://localhost:5173',
     'http://localhost:5174',
-    'https://at-url.vercel.app',
-    'https://service-a.vercel.app',
+    'https://tels-url.vercel.app',
+    'https://tels-seven.vercel.app',
   ],
   credentials: true,
 }
