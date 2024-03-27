@@ -1,7 +1,7 @@
 {
-  "name": "at-api",
+  "name": "tels-api",
   "version": "1.0.0",
-  "description": "at api",
+  "description": "tels api",
   "main": "index.js",
   "engines": {
     "node": "18"
